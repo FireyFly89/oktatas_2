@@ -1,0 +1,1 @@
+{"email":"test@test.test","username":"asdfasdfff","fullname":"<script>alert('XSS');<\/script>","password":"valami12","password_repeat":"valami12","country_and_city":"Valami, 52","address":"Valami, 52"}

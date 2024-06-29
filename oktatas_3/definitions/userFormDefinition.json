@@ -1,0 +1,32 @@
+[
+    {
+        "key": "email",
+        "label": "E-mail"
+    },
+    {
+        "key": "username",
+        "label": "Felhasználónév"
+    },
+    {
+        "key": "fullname",
+        "label": "Név"
+    },
+    {
+        "key": "password",
+        "label": "Jelszó",
+        "type": "password"
+    },
+    {
+        "key": "password_repeat",
+        "label": "Jelszó ismétlése",
+        "type": "password"
+    },
+    {
+        "key": "country_and_city",
+        "label": "Ország, Város"
+    },
+    {
+        "key": "address",
+        "label": "Utca, házszám"
+    }
+]
