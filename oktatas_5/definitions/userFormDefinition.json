@@ -1,0 +1,43 @@
+[
+    {
+        "key": "email",
+        "label": "E-mail"
+    },
+    {
+        "key": "username",
+        "label": "Felhasználónév",
+        "rules": [
+            {
+                "type": "min",
+                "condition": 4
+            },
+            {
+                "type": "max",
+                "condition": 14
+            }
+        ]
+    },
+    {
+        "key": "fullname",
+        "label": "Név"
+    },
+    
+    {
+        "key": "password",
+        "label": "Jelszó",
+        "type": "password"
+    },
+    {
+        "key": "password_repeat",
+        "label": "Jelszó ismétlése",
+        "type": "password"
+    },
+    {
+        "key": "country_and_city",
+        "label": "Ország, Város"
+    },
+    {
+        "key": "address",
+        "label": "Utca, házszám"
+    }
+]
