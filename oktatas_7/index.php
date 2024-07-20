@@ -1,16 +1,3 @@
-<?php
-require('./includes/init.php');
-require(INCLUDES_DIR . '/helpers.php');
-require(CLASSES_DIR . '/DatabaseManager.php');
-require(CLASSES_DIR . '/Validation.php');
-
-// Példányosítás
-$dbManager = new DatabaseManager();
-$validator = new Validation();
-//$result = $dbManager->delete('users', ['id' => 2]);
-
-dd($validator->validatePrivate());
-?>
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
