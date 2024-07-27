@@ -1,0 +1,48 @@
+[
+    {
+        "key": "email",
+        "label": "E-mail",
+        "type": "email",
+        "rules": [
+            {
+                "type": "regex",
+                "condition": "/^[a-zA-Z_0-9]+\\@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+$/",
+                "error": "Helytelen e-mail cím"
+            }
+        ]
+    },
+    {
+        "key": "username",
+        "label": "Felhasználónév",
+        "rules": [
+            {
+                "type": "min",
+                "condition": 6,
+                "error": "A felhasználónévnek legalább 6 karakternek kell lennie"
+            },
+            {
+                "type": "max",
+                "condition": 14,
+                "error": "A felhasználónév maximum 14 karakter lehet"
+            }
+        ]
+    },
+    {
+        "key": "password",
+        "label": "Jelszó",
+        "type": "password",
+        "rules": [
+            {
+                "type": "compare_equal",
+                "condition": "password_repeat"
+            }
+        ],
+        "force_show": true
+    },
+    {
+        "key": "password_repeat",
+        "label": "Jelszó ismétlése",
+        "type": "password",
+        "force_show": true
+    }
+]
