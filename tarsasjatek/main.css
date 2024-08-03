@@ -1,0 +1,88 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+.left-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    width: 250px;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+span.result{
+    font-size: 48px;
+    font-weight: bolder;
+}
+span.win{
+    font-size: 36px;
+    font-weight: bolder;
+    color: red;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.board {
+    display: grid;
+    grid-template-areas:
+        'div1 div2 div3 div4 div5 div6 div7 div8 div9 div10'
+        '. . . . . . . . . div11'
+        '. . . . . . . . . div12'
+        'div22 div21 div20 div19 div18 div17 div16 div15 div14 div13'
+        'div23 . . . . . . . . .'
+        'div24 . . . . . . . . .'
+        'div25 div26 div27 div28 div29 div30 div31 div32 div33 div34'
+        '. . . . . . . . . div35'
+        '. . . . . . . . . div36'
+        'div46 div45 div44 div43 div42 div41 div40 div39 div38 div37'
+        'div47 . . . . . . . . .'
+        'div48 . . . . . . . . .'
+        'div49 div50 div51 div52 div53 div54 div55 div56 div57 div58'
+        '. . . . . . . . . div59'
+        'div60 div60 div60 div60 div60 div60 div60 div60 div60 div60';
+    
+    gap: 2px;
+    width: 80%;
+    margin: 20px auto;
+    background-image: url("img/bcg.jpg");
+}
+.cell {
+    height: 50px;
+    width: auto;
+    position: relative;
+}
+.kocka{
+    width: 200px;
+    height: 200px;
+}
+.player{
+    position: absolute;
+    width: auto;
+    height: 60px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.kincs{
+    position: absolute;
+    width: auto;
+    height: 60px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.restart{
+    color: white;
+    background-color: rgb(243, 124, 70);
+}
+input{
+    height: 25px;
+}
+

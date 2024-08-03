@@ -32,7 +32,6 @@ $loggedUser = $user->filterFillables($_SESSION['logged_in']);
                 <div style="display: flex; flex-direction: column;">
                     <label><?php echo $definition['label']; ?></label>
                     <input
-                        required
                         type="<?php echo $definition['type'] ?? 'text'; ?>"
                         name="<?php echo $definition['key']; ?>" 
                         value="<?php echo $loggedUser[$definition['key']] ?? ''; ?>"
