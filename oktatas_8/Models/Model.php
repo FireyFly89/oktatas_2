@@ -1,7 +1,8 @@
 <?php
 require(CLASSES_DIR . '/DatabaseManager.php');
+require(CLASSES_DIR . '/Database.php');
 
-class Model extends DatabaseManager {
+class Model extends DatabaseManager implements Database {
     protected array $casts;
     protected string $tableName;
 
@@ -18,7 +19,7 @@ class Model extends DatabaseManager {
         }
     }
 
-    protected function create(array $columnsValues) {
+    public function create(array $columnsValues) {
         $columnNames = implode(',', array_keys($columnsValues));
         $columnNameValues = ':' . implode(',:', array_keys($columnsValues));
         $stmt = $this->connection->prepare("insert into $this->tableName ($columnNames) VALUES ($columnNameValues)");
@@ -31,7 +32,7 @@ class Model extends DatabaseManager {
         return $this->connection->lastInsertId();
     }
 
-    protected function read(array $columns = ['*'],  array $conditions = []) {
+    public function read(array $columns = ['*'], array $conditions = []) {
         $columnNames = implode(',', $columns);
         $conditionString = '';
 
@@ -50,7 +51,7 @@ class Model extends DatabaseManager {
         return $result;
     }
 
-    protected function update(array $columnsValues, array $conditions) {
+    public function update(array $columnsValues, array $conditions) {
         $conditionString = $this->assembleConditions($conditions);
         $set = "set";
         $i = 1;
@@ -69,7 +70,7 @@ class Model extends DatabaseManager {
         return $stmt->execute();
     }
 
-    protected function delete(array $conditions) {
+    public function delete(array $conditions) {
         $conditionString = $this->assembleConditions($conditions);
         $stmt = $this->connection->prepare("delete from $this->tableName $conditionString");
         return $stmt->execute();

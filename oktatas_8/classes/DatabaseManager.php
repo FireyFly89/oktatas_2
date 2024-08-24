@@ -1,5 +1,5 @@
 <?php
-abstract class DatabaseManager {
+class DatabaseManager {
     protected $connection;
 
     // Konstruktor
@@ -11,12 +11,4 @@ abstract class DatabaseManager {
     ) {
         $this->connection = new PDO("mysql:host=$host;dbname=$dbName", $dbUser, $dbPass);
     }
-
-    protected abstract function create(array $columnsValues);
-
-    protected abstract function read(array $columns = ['*'],  array $conditions = []);
-
-    protected abstract function update(array $columnsValues, array $conditions);
-
-    protected abstract function delete(array $conditions);
 }

@@ -1,6 +1,10 @@
-<?php session_start(); ?>
+<?php
+
+
+session_start(); ?>
 
 <!DOCTYPE html>
+<html lang="hu">
     <head>
         <meta charset="UTF-8">
     </head>
