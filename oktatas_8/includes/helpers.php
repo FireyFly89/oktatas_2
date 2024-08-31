@@ -12,6 +12,7 @@ function dd(mixed $data)
     die();
 }
 
+
 function pd(mixed $data)
 {
     echo "<pre>";
